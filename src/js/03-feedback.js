@@ -22,7 +22,7 @@ event.currentTarget.reset();
 }
 
 function fillForm() {
-formData = JSON.parse(localStorage.getItem("feedback-form-state"));
+const formData = JSON.parse(localStorage.getItem("feedback-form-state"));
 
 if(formData) {
     email.value = formData.email;
