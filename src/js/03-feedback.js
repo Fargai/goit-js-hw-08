@@ -9,13 +9,13 @@ formEl.addEventListener('input', throttle(formInput, 500));
 formEl.addEventListener('submit', formSubmit);
 
 function formInput() {
-formData = {email: email.value, message: message.value};
+const formData = {email: email.value, message: message.value};
 localStorage.setItem("feedback-form-state", JSON.stringify(formData));
 }
 
 function formSubmit (event) {
 event.preventDefault(); 
-formData = {email: email.value, message: message.value};
+const formData = {email: email.value, message: message.value};
 console.log(formData);
 localStorage.removeItem("feedback-form-state");
 event.currentTarget.reset();
